@@ -57,3 +57,22 @@
 
   }
 }
+.grid-6 {
+  text-align: end;
+  margin: 30px 10px 0 0;
+
+  a.post {
+    background-color: blue;
+    text-decoration: none;
+    color: #fff;
+    padding: 8px;
+    border-radius: 20px;
+    font-family: monospace;
+    margin-left: 10px;
+    &:hover {
+      opacity:0.8;
+      filter:alpha(opacity=80);
+      -ms-filter: "alpha( opacity=80 )";
+    }
+  }
+}
