@@ -2,7 +2,7 @@
     background-color: rgb(235, 235, 235); 
     height: 100%;
     padding: 83px 0;
-    color: blue;
+    font-family: monospace;
   &__box {
     background-color: #fff;
     width: 700px;
@@ -60,7 +60,20 @@
 .grid-6 {
   text-align: end;
   margin: 30px 10px 0 0;
-
+  a  {
+    background-color: red;
+    text-decoration: none;
+    color: #fff;
+    padding: 8px;
+    border-radius: 20px;
+    font-family: monospace;
+    margin-left: 10px;
+    &:hover {
+      opacity:0.8;
+      filter:alpha(opacity=80);
+      -ms-filter: "alpha( opacity=80 )";
+    }
+  }
   a.post {
     background-color: blue;
     text-decoration: none;
