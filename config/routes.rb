@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root to: "movie#index"
 
   resources :movie
-
+  resources :admin
   devise_for :admins, controllers: {
     sessions:      'admins/sessions',
     passwords:     'admins/passwords',
