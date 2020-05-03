@@ -69,3 +69,7 @@ gem 'haml-rails'
 gem 'erb2haml'
 gem 'carrierwave'
 gem "font-awesome-rails"
+gem "twitter-bootstrap-rails"
+gem "less-rails"
+gem 'therubyracer'
+gem 'streamio-ffmpeg'

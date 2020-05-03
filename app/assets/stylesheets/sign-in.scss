@@ -1,7 +1,7 @@
 .login {
     background-color: rgb(235, 235, 235); 
     height: 100%;
-    padding: 83px 0;
+    padding: 40px 0;
     font-family: monospace;
   &__box {
     background-color: #fff;
@@ -22,6 +22,7 @@
   }
 }
 .actions {
+  display: block;
   text-align: center;
   input {
     margin-top: 20px;
@@ -91,8 +92,11 @@
 }
 
 p.alert {
-    text-align: center;
-    color: red;
+  text-align: center;
+  margin-top: -25px;
+  height: 32px;
+  line-height: 2.5;
+  color: red;
 }
 p.notice {
   text-align: center;
