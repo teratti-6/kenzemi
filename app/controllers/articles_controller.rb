@@ -21,6 +21,16 @@ class ArticlesController < ApplicationController
   # GET /articles/1
   # GET /articles/1.json
   def show
+    begin
+      @next = @article.next
+    rescue
+      @next = nil
+    end
+    begin
+      @prev = @article.previous
+    rescue
+      @prev = nil
+    end
   end
 
   # GET /articles/new
