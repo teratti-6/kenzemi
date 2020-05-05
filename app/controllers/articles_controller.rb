@@ -1,10 +1,21 @@
 class ArticlesController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_article, only: [:show, :edit, :update, :destroy]
 
   # GET /articles
   # GET /articles.json
   def index
-    @articles = Article.all
+    @articles1 = Article.where(subject_id:1)
+    @articles2 = Article.where(subject_id:2)
+    @articles3 = Article.where(subject_id:3)
+    @articles4 = Article.where(subject_id:4)
+    @articles5 = Article.where(subject_id:5)
+    
+    @subjects1 = Subject.find(1)
+    @subjects2 = Subject.find(2)
+    @subjects3 = Subject.find(3)
+    @subjects4 = Subject.find(4)
+    @subjects5 = Subject.find(5)
   end
 
   # GET /articles/1

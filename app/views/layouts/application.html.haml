@@ -3,14 +3,12 @@
   %head
     %meta(charset="utf-8")
     %meta(http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1")
-    -# %meta(name="viewport" content="width=device-width, initial-scale=1.0")
     %meta{:content => "”width=device-width,initial-scale=1.0″", :name => "”viewport”"}/
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
     %link{:crossorigin => "anonymous", :href => "https://use.fontawesome.com/releases/v5.7.2/css/all.css", :integrity => "sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr", :rel => "stylesheet"}/
     %title= content_for?(:title) ? yield(:title) : "Kenzemi"
     = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
-    -# = stylesheet_link_tag "application", :media => "all"
     -# = favicon_link_tag 'apple-touch-icon-144x144-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png', :sizes => '144x144'
     -# = favicon_link_tag 'apple-touch-icon-114x114-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png', :sizes => '114x114'
     -# = favicon_link_tag 'apple-touch-icon-72x72-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png', :sizes => '72x72'
@@ -23,61 +21,12 @@
     - if user_signed_in?
       .user_nav.grid-6
         = link_to "ログアウト", destroy_user_session_path, method: :delete
-        -# %a.post{:href => "/posts/new"} 投稿する
     - else
       .grid-6
 
   %body
     %p.notice= notice
-    %p.alert= alert
+    -# %p.alert= alert
     = yield
   %footer
     %p &copy; MEDWIDE Company 2020
-    -# .navbar.navbar-default.navbar-static-top
-    -#   .container
-    -#     %button.navbar-toggle(type="button" data-toggle="collapse" data-target=".navbar-responsive-collapse")
-    -#       %span.icon-bar
-    -#       %span.icon-bar
-    -#       %span.icon-bar
-    -#     %a.navbar-brand(href="#") Kenzemi
-    -#     .navbar-collapse.collapse.navbar-responsive-collapse
-    -#       %ul.nav.navbar-nav
-    -#         %li= link_to "Link 1", "/path1"
-    -#         %li= link_to "Link 2", "/path2"
-    -#         %li= link_to "Link 3", "/path3"
-    -#         %li= link_to "Link 3", "/path3"
-
-          -# = bootstrap_flash
-        -# .col-lg-3
-        -#   .well.sidebar-nav
-        -#     %h3 Sidebar
-        -#     %ul.nav.nav-list
-        -#       %li.nav-header Sidebar
-        -#       %li= link_to "Link 1", "/path1"
-        -#       %li= link_to "Link 2", "/path2"
-        -#       %li= link_to "Link 3", "/path3"
-      
-
--# !!!
--# %html
--#   %head
--#     %meta{:content => "”width=device-width,initial-scale=1.0″", :name => "”viewport”"}/
--#     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
--#     %link{:crossorigin => "anonymous", :href => "https://use.fontawesome.com/releases/v5.7.2/css/all.css", :integrity => "sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr", :rel => "stylesheet"}/
--#     %title Medwide
--#     = csrf_meta_tags
--#     = csp_meta_tag
--#     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
--#     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
--#     - if user_signed_in?
--#       .user_nav.grid-6
--#         = link_to "ログアウト", destroy_user_session_path, method: :delete
--#         %a.post{:href => "/posts/new"} 投稿する
--#     - else
--#       .grid-6
--#         = link_to "ログイン", new_user_session_path, class: 'post'
--#         = link_to "新規登録", new_user_registration_path, class: 'post'
--#   %body
--#     %p.notice= notice
--#     %p.alert= alert
--#     = yield

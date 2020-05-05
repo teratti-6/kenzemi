@@ -70,6 +70,6 @@ gem 'erb2haml'
 gem 'carrierwave'
 gem "font-awesome-rails"
 gem "twitter-bootstrap-rails"
-gem "less-rails"
+gem 'less-rails', git: 'https://github.com/MustafaZain/less-rails'
 gem 'therubyracer'
 gem 'streamio-ffmpeg'

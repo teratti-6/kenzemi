@@ -1,23 +1,50 @@
-%h1 Listing articles
-
-%table
-  %thead
-    %tr
-      %th Title
-      %th Video
-      %th
-      %th
-      %th
-
-  %tbody
-    - @articles.each do |article|
-      %tr
-        %td= article.title
-        %td= article.video
-        %td= link_to 'Show', article
-        %td= link_to 'Edit', edit_article_path(article)
-        %td= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' }
-
-%br
-
-= link_to 'New Article', new_article_path
+= render "./layouts/header"
+.study
+  .study__box
+    .study__box__wrap
+      .study__box__wrap__lesson
+        .study__box__wrap__lesson__img
+          .lesson-img
+            = "#{@subjects1.name}"
+        - @articles1.each do |article|
+          .study__box__wrap__lesson__that
+            = link_to root_path, class:"lesson-change" do
+              .study__box__wrap__lesson__that__move
+                .thumbnail
+                  = link_to article.title, article 
+        .study__box__wrap__lesson__img
+          .lesson-img
+            = "#{@subjects2.name}"
+        - @articles2.each do |article|
+          .study__box__wrap__lesson__that
+            = link_to root_path, class:"lesson-change" do
+              .study__box__wrap__lesson__that__move
+                .thumbnail
+                  = link_to article.title, article 
+        .study__box__wrap__lesson__img
+          .lesson-img
+            = "#{@subjects3.name}"
+        - @articles3.each do |article|
+          .study__box__wrap__lesson__that
+            = link_to root_path, class:"lesson-change" do
+              .study__box__wrap__lesson__that__move
+                .thumbnail
+                  = link_to article.title, article 
+        .study__box__wrap__lesson__img
+          .lesson-img
+            = "#{@subjects4.name}"
+        - @articles4.each do |article|
+          .study__box__wrap__lesson__that
+            = link_to root_path, class:"lesson-change" do
+              .study__box__wrap__lesson__that__move
+                .thumbnail
+                  = link_to article.title, article 
+        .study__box__wrap__lesson__img
+          .lesson-img
+            = "#{@subjects5.name}"
+        - @articles5.each do |article|
+          .study__box__wrap__lesson__that
+            = link_to root_path, class:"lesson-change" do
+              .study__box__wrap__lesson__that__move
+                .thumbnail
+                  = link_to article.title, article 
