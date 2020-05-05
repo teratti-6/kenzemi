@@ -26,57 +26,62 @@
       }
     }
   }
-  .study {
-    background-color: rgb(235, 235, 235);
-    margin: 0 auto;
-    padding: 15px 150px;
-    @media only screen and ( max-device-width: 480px) {
-      padding: 70px 127px;
-    }
-    &__box {
-      background-color: #fff;
-      &__wrap {
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-        &__lesson {
-          width: 30%;
-          margin: 20px 10px;
-          border: solid 1px rgb(235, 235, 235);
+}
+
+.study {
+  background-color: rgb(235, 235, 235);
+  margin: 0 auto;
+  padding: 15px 150px;
+  @media only screen and ( max-device-width: 480px) {
+    padding: 70px 127px;
+  }
+  &__box {
+    background-color: #fff;
+    &__wrap {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      &__lesson {
+        width: 85%;
+        margin: 20px 10px;
+        @media only screen and ( max-device-width: 480px) {
+          width: 400px;
+        }
+        &__img {
+          .lesson-img {
+            height: 50px;
+            width: 100%;
+            text-align: center;
+            line-height: 3.5;
+            /* margin-bottom: -4px; */
+            font-family: monospace;
+            color: white;
+            background-color: blue;
+          }
+        }
+        &__that {
           @media only screen and ( max-device-width: 480px) {
-            width: 400px;
+            line-height: 4;
+            text-align: center;
           }
-          &__img {
-            .lesson-img {
-              height: 150px;
-              width: 100%;
-              margin-bottom: -4px;
+          .lesson-change {
+            text-decoration: none;
+
+          }
+          &__move {
+            font-size: 20px;
+            border-top: solid 1px rgb(235, 235, 235);
+            font-family: monospace;
+            &:hover {
+              background-color: rgb(235, 235, 235);
             }
-          }
-          &__that {
+            &:active {
+              background-color: #fff;
+            }
             @media only screen and ( max-device-width: 480px) {
-              line-height: 4;
-              text-align: center;
-            }
-            .lesson-change {
-              text-decoration: none;
+              height: 200px;
+              font-size: 50px;
 
-            }
-            &__move {
-              font-size: 20px;
-              border-top: solid 1px rgb(235, 235, 235);
-              font-family: monospace;
-              &:hover {
-                background-color: rgb(235, 235, 235);
-              }
-              &:active {
-                background-color: #fff;
-              }
-              @media only screen and ( max-device-width: 480px) {
-                height: 200px;
-                font-size: 50px;
-
-              }
             }
           }
         }
@@ -84,6 +89,7 @@
     }
   }
 }
+
 
 // users#show
 .mypage {
