@@ -49,7 +49,7 @@ test:
 #
 production:
   <<: *default
-  # database: kenzemi_production
+  database: kenzemi_production
   # username: kenzemi
   # password: <%= ENV['KENZEMI_DATABASE_PASSWORD'] %>
   username: root
