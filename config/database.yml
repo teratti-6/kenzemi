@@ -49,6 +49,9 @@ test:
 #
 production:
   <<: *default
-  database: kenzemi_production
-  username: kenzemi
-  password: <%= ENV['KENZEMI_DATABASE_PASSWORD'] %>
+  # database: kenzemi_production
+  # username: kenzemi
+  # password: <%= ENV['KENZEMI_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
