@@ -82,3 +82,4 @@ gem "twitter-bootstrap-rails"
 gem 'less-rails', git: 'https://github.com/MustafaZain/less-rails'
 gem 'therubyracer'
 gem 'streamio-ffmpeg'
+gem 'fog-aws'
